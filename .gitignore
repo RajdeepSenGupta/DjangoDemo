@@ -1,0 +1,5 @@
+## Ignore .pyc compiled python files
+
+PythonDemo/*.pyc
+polls/*.pyc
+polls/*/*.pyc
