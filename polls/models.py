@@ -8,7 +8,21 @@ import datetime
 from django.utils import timezone
 
 
+class Standard(models.Model):
+    standard_values = (
+        ('Ninth', 'IX'),
+        ('Tenth', 'X'),
+        ('Eleventh', 'XI'),
+        ('Twelfth', 'XII')
+    )
+    standard = models.CharField(max_length=20, choices=standard_values, default='')
+
+    def __str__(self):
+        return self.standard
+
+
 class Question(models.Model):
+    standard = models.ForeignKey(Standard)
     question_text = models.CharField(max_length=200)
     pub_date = models.DateTimeField('date published')
 

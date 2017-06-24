@@ -3,3 +3,14 @@
 PythonDemo/*.pyc
 polls/*.pyc
 polls/*/*.pyc
+
+
+## Ignore Database
+
+MyDatabase
+
+
+## Ignore .idea configuration
+
+.idea
+.idea/*.*
